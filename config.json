@@ -13,10 +13,10 @@
   },
   "requires": [],
   "canContain": false,
-  "view": "modules/pdfviewer/index.html",
-  "files": ["modules/pdfviewer/controller.js"],
+  "view": "http://resources.kingofapp.com/modules/pdfviewer/index.html",
+  "files": ["http://resources.kingofapp.com/modules/pdfviewer/controller.js"],
   "scope": {
-    "value": "http://kingofapp.es/wp-content/uploads/2015/11/wwwhatsnew.pdf",
+    "value": "",
   },
   "config": [{
     "type": "input",
