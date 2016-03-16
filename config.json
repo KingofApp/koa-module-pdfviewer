@@ -53,14 +53,14 @@
     "dragDrop": true
   },
   "images": {
-    "list": "images/modules/list.png",
+    "list": "modules/pdfviewer/images/list.png",
     "screenshots": [
-      "images/modules/screenshot01.png",
-      "images/modules/screenshot02.png"
+      "modules/pdfviewer/images/screenshot01.png",
+      "modules/pdfviewer/images/screenshot02.png"
     ],
-    "popover": "images/modules/popover.png",
-    "banner": "images/modules/banner.png",
-    "logo": "images/modules/logo.png"
+    "popover": "modules/pdfviewer/images/popover.png",
+    "banner": "modules/pdfviewer/images/banner.png",
+    "logo": "modules/pdfviewer/images/logo.png"
   }
 
 }
