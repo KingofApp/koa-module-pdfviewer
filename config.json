@@ -29,9 +29,7 @@
     "windows"
   ],
   "view": "modules/pdfviewer/index.html",
-  "files": [
-    "modules/pdfviewer/controller.js"
-  ],
+  "files": ["modules/pdfviewer/pdfjs/pdf.js", "modules/pdfviewer/pdfjs/pdf.worker.js", "modules/pdfviewer/controller.js"],
   "scope": {
     "value": "",
     "debug": false
