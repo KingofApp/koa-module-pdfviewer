@@ -129,11 +129,13 @@ function loadFunction($scope, structureService, $location){
       page.render(renderContext);
     });
   };
-
+setTimeout(function () {
   PDFJS.disableStream = true;
   PDFJS.getDocument($scope.pdfviewer.modulescope.value).then(function(pdf) {
     pdfFile = pdf;
 
     openPage(pdf, currPageNumber, 1);
   });
+}, 500);
+
 }
