@@ -7801,5 +7801,4 @@ if (!PDFJS.workerSrc && typeof document !== 'undefined') {
     var pdfjsSrc = scriptTagContainer.lastChild.src;
     return pdfjsSrc && pdfjsSrc.replace(/\.js$/i, '.worker.js');
   })();
-  PDFJS.workerSrc = 'modules/pdfviewer/pdfjs/pdf.worker.js';
 }

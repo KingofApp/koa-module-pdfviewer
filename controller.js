@@ -1,11 +1,11 @@
 angular
   .controller('pdfviewerCtrl', loadFunction);
 
-loadFunction.$inject = ['$scope', 'structureService', '$location'];
+loadFunction.$inject = ['$scope', '$filter', 'structureService', '$location'];
 
-function loadFunction($scope, structureService, $location){
+function loadFunction($scope, $filter, structureService, $location) {
   //Register upper level modules
-  structureService.registerModule($location,$scope,"pdfviewer");
+  structureService.registerModule($location, $scope, "pdfviewer");
 
   if (!window.requestAnimationFrame) {
     window.requestAnimationFrame = (function() {
@@ -36,7 +36,10 @@ function loadFunction($scope, structureService, $location){
   var touchDown = false;
 
   var lastTouchTime = 0;
-  pageElement.addEventListener('touchstart', function(e) {
+  pageElement.addEventListener('touchstart', startTouch);
+  pageElement.addEventListener('mousedown', startTouch);
+
+  function startTouch(e) {
     touchDown = true;
 
     if (e.timeStamp - lastTouchTime < 500) {
@@ -45,9 +48,12 @@ function loadFunction($scope, structureService, $location){
     } else {
       lastTouchTime = e.timeStamp;
     }
-  });
+  }
 
-  pageElement.addEventListener('touchmove', function(e) {
+  pageElement.addEventListener('touchmove', moveTouch);
+  pageElement.addEventListener('mousemove', moveTouch);
+
+  function moveTouch(e) {
     if (pageElement.scrollLeft === 0 ||
       pageElement.scrollLeft === pageElement.scrollWidth - page.clientWidth) {
       reachedEdge = true;
@@ -58,9 +64,10 @@ function loadFunction($scope, structureService, $location){
 
     if (reachedEdge && touchDown) {
       if (touchStart === null) {
-        touchStart = e.changedTouches[0].clientX;
+        touchStart = (e.changedTouches) ? e.changedTouches[0].clientX : e.clientX;
       } else {
-        var distance = e.changedTouches[0].clientX - touchStart;
+        var xx = (e.changedTouches) ? e.changedTouches[0].clientX : e.clientX;
+        var distance = xx - touchStart;
         if (distance < -100) {
           touchStart = null;
           reachedEdge = false;
@@ -74,12 +81,14 @@ function loadFunction($scope, structureService, $location){
         }
       }
     }
-  });
+  }
+  pageElement.addEventListener('touchend', endTouch);
+  pageElement.addEventListener('mouseup', endTouch);
 
-  pageElement.addEventListener('touchend', function(e) {
+  function endTouch(e) {
     touchStart = null;
     touchDown = false;
-  });
+  }
 
   var pdfFile;
   var currPageNumber = 1;
@@ -101,7 +110,7 @@ function loadFunction($scope, structureService, $location){
   };
 
   var zoomed = true;
-  var toggleZoom = function () {
+  var toggleZoom = function() {
     zoomed = !zoomed;
     openPage(pdfFile, currPageNumber);
   };
@@ -130,10 +139,16 @@ function loadFunction($scope, structureService, $location){
     });
   };
 
-  PDFJS.disableStream = true;
-  PDFJS.getDocument($scope.pdfviewer.modulescope.value).then(function(pdf) {
-    pdfFile = pdf;
+  PDFJS.workerSrc = $filter('loadUrl')('modules/pdfviewer/pdfjs/pdf.worker.js');
+  setTimeout(function() {
+    PDFJS.disableStream = true;
+    PDFJS.disableWorker = true;
+    PDFJS.getDocument($scope.pdfviewer.modulescope.value).then(function(pdf) {
+      pdfFile = pdf;
+      openPage(pdf, currPageNumber, 1);
+    }).catch(function(error) {
+      console.log("Error occurred", error);
+    });
+  }, 400);
 
-    openPage(pdf, currPageNumber, 1);
-  });
 }
