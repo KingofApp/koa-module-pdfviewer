@@ -15,7 +15,7 @@
   },
   "icon": "pdf-viewer",
   "type": "A",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "King of App",
   "category": [
     "others"
@@ -51,14 +51,14 @@
     "dragDrop": true
   },
   "images": {
-    "list": "modules/pdfviewer/images/list.png",
+    "list": "modules/pdfviewer/images/pdf_list.png",
     "screenshots": [
       "modules/pdfviewer/images/screenshot01.png",
       "modules/pdfviewer/images/screenshot02.png"
     ],
-    "popover": "modules/pdfviewer/images/popover.png",
-    "banner": "modules/pdfviewer/images/banner.png",
-    "logo": "modules/pdfviewer/images/logo.png"
+    "popover": "modules/pdfviewer/images/pdf_popover.png",
+    "banner": "modules/pdfviewer/images/pdf_popover.png",
+    "logo": "modules/pdfviewer/images/pdf_icon.png"
   }
 
 }
