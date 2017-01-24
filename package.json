@@ -1,6 +1,6 @@
 {
   "name": "koapp-module-pdfviewer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sube la información que quieras en formato PDF. ¡Listo para descargar!",
   "directories": {
     "test": "test"
