@@ -2,8 +2,8 @@
   "name": "PDF Viewer",
   "identifier": "pdfviewer",
   "description": {
-    "es-ES": "Sube la información que quieras en formato PDF. Todos los archivos procedentes de una url listos para descargar.",
-    "en-US": "Sube la información que quieras en formato PDF. Todos los archivos procedentes de una url listos para descargar."
+    "es-ES": "Guarda y comparte tu información en formato PDF a través de este módulo para descargarla fácilmente cuando la necesites.",
+    "en-US": "Upload and share your information in pdf format via this module so you can download your files at any time."
   },
   "documentation": {
     "es-ES": "modules/pdfviewer/documentation/es_ES.md",
@@ -11,7 +11,7 @@
   },
   "descriptionShort": {
     "es-ES": "Sube la información que quieras en formato PDF. ¡Listo para descargar!",
-    "en-US": "Sube la información que quieras en formato PDF. ¡Listo para descargar!"
+    "en-US": "Upload your information in PDF format for an easy access at any time!"
   },
   "icon": "pdf-viewer",
   "type": "A",
