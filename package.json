@@ -1,6 +1,6 @@
 {
   "name": "koapp-module-pdfviewer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Sube la información que quieras en formato PDF. ¡Listo para descargar!",
   "directories": {
     "test": "test"
@@ -31,7 +31,7 @@
     "jsesc": "^2.2.0",
     "protractor": "^2.0.0"
   },
-  "author": "King of App",
+  "author": "Koapp <koappnpmpublisher@gmail.com> (http://www.kingofapp.com)",
   "license": "MIT",
   "keywords": [
     "koapp",
