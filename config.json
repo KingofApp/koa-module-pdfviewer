@@ -1,64 +1,69 @@
 {
-  "name": "PDF Viewer",
-  "identifier": "pdfviewer",
-  "description": {
-    "es-ES": "Guarda y comparte tu información en formato PDF a través de este módulo para descargarla fácilmente cuando la necesites.",
-    "en-US": "Upload and share your information in pdf format via this module so you can download your files at any time."
-  },
-  "documentation": {
-    "es-ES": "modules/pdfviewer/documentation/es_ES.md",
-    "en-US": "modules/pdfviewer/documentation/en_US.md"
-  },
-  "descriptionShort": {
-    "es-ES": "Sube la información que quieras en formato PDF. ¡Listo para descargar!",
-    "en-US": "Upload your information in PDF format for an easy access at any time!"
-  },
-  "icon": "pdf-viewer",
-  "type": "A",
-  "version": "1.0.6",
-  "author": "King of App",
-  "category": [
-    "others"
-  ],
-  "price": 0,
-  "subscription": false,
-  "canContain": false,
-  "platforms": [
-    "android",
-    "ios",
-    "windows"
-  ],
-  "view": "modules/pdfviewer/index.html",
-  "files": ["modules/pdfviewer/pdfjs/pdf.js", "modules/pdfviewer/pdfjs/pdf.worker.js", "modules/pdfviewer/controller.js"],
-  "scope": {
-    "value": "",
-    "debug": false
-  },
-  "libs": [],
-  "config": [{
-    "type": "input",
-    "key": "value",
-    "templateOptions": {
-      "description": "Url pdf",
-      "pattern": "(https?://)([/\\w.()-]*).*",
-      "required": true,
-      "label": "Url"
-    }
-  }],
-  "showOn": {
-    "menu": true,
-    "market": true,
-    "dragDrop": true
-  },
-  "images": {
-    "list": "modules/pdfviewer/images/pdf_list.png",
-    "screenshots": [
-      "modules/pdfviewer/images/screenshot01.png",
-      "modules/pdfviewer/images/screenshot02.png"
+    "name": "PDF Viewer",
+    "identifier": "pdfviewer",
+    "description": {
+        "es-ES": "Guarda y comparte tu información en formato PDF a través de este módulo para descargarla fácilmente cuando la necesites.",
+        "en-US": "Upload and share your information in pdf format via this module so you can download your files at any time."
+    },
+    "documentation": {
+        "es-ES": "modules/pdfviewer/documentation/es_ES.md",
+        "en-US": "modules/pdfviewer/documentation/en_US.md"
+    },
+    "descriptionShort": {
+        "es-ES": "Sube la información que quieras en formato PDF. ¡Listo para descargar!",
+        "en-US": "Upload your information in PDF format for an easy access at any time!"
+    },
+    "icon": "pdf-viewer",
+    "type": "A",
+    "version": "1.0.7",
+    "author": "King of App",
+    "category": [
+        "others"
     ],
-    "popover": "modules/pdfviewer/images/pdf_popover.png",
-    "banner": "modules/pdfviewer/images/pdf_popover.png",
-    "logo": "modules/pdfviewer/images/pdf_icon.png"
-  }
-
+    "price": 0,
+    "subscription": false,
+    "canContain": false,
+    "platforms": [
+        "android",
+        "ios",
+        "windows"
+    ],
+    "view": "modules/pdfviewer/index.html",
+    "files": [
+        "modules/pdfviewer/pdfjs/pdf.js",
+        "modules/pdfviewer/pdfjs/pdf.worker.js",
+        "modules/pdfviewer/controller.js"
+    ],
+    "scope": {
+        "value": "",
+        "debug": false
+    },
+    "libs": [],
+    "config": [
+        {
+            "type": "input",
+            "key": "value",
+            "templateOptions": {
+                "description": "Url pdf",
+                "pattern": "(https?://)([/\\w.()-]*).*",
+                "required": true,
+                "label": "Url"
+            }
+        }
+    ],
+    "showOn": {
+        "menu": true,
+        "market": true,
+        "dragDrop": true
+    },
+    "images": {
+        "list": "modules/pdfviewer/images/pdf_list.png",
+        "screenshots": [
+            "modules/pdfviewer/images/screenshot01.png",
+            "modules/pdfviewer/images/screenshot02.png"
+        ],
+        "popover": "modules/pdfviewer/images/pdf_popover.png",
+        "banner": "modules/pdfviewer/images/pdf_popover.png",
+        "logo": "modules/pdfviewer/images/pdf_icon.png"
+    }
 }
