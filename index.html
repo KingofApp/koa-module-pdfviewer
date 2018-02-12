@@ -1,5 +1,14 @@
-<div ng-controller="pdfviewerCtrl" class="module pdfviewer">
-  <div id="page" style="overflow:auto;">
-    <canvas id="canvas"></canvas>
-  </div>
+<div ng-controller="pdfviewerCtrl" class="module pdfviewer" data-ng-init="init()">
+
+  <iframe ng-src="{{iframeSrc}}" width="600" height="780" style="border: none;"></iframe>
 </div>
+<style is='custom-style'>
+  .pdfviewer iframe {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    background-color: var(--background-color);
+    text-align: center;
+  }
+</style>
