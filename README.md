@@ -9,5 +9,5 @@ Una vez subido a la red, sólo hay que **copiar la url** de destino en el campo 
 ### Details:
 
 - Author: King of app
-- Version: 1.0.7
+- Version: 1.0.9
 - Homepage:
